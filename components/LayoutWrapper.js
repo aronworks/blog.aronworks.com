@@ -1,9 +1,9 @@
-import headerNavLinks from '@/data/headerNavLinks'
+// import headerNavLinks from '@/data/headerNavLinks'
 import Logo from './Logo'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
-import MobileNav from './MobileNav'
+// import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 
 const LayoutWrapper = ({ children }) => {
@@ -21,19 +21,19 @@ const LayoutWrapper = ({ children }) => {
             </Link>
           </div>
           <div className="flex items-center text-base leading-5">
-            <div className="hidden sm:block">
-              {headerNavLinks.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100"
-                >
-                  {link.title}
-                </Link>
-              ))}
-            </div>
+            {/*<div className="hidden sm:block">*/}
+            {/*  {headerNavLinks.map((link) => (*/}
+            {/*    <Link*/}
+            {/*      key={link.title}*/}
+            {/*      href={link.href}*/}
+            {/*      className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100"*/}
+            {/*    >*/}
+            {/*      {link.title}*/}
+            {/*    </Link>*/}
+            {/*  ))}*/}
+            {/*</div>*/}
             <ThemeSwitch />
-            <MobileNav />
+            {/*<MobileNav />*/}
           </div>
         </header>
         <main className="mb-auto">{children}</main>

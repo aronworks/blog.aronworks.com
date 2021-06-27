@@ -1,10 +1,10 @@
 import Link from '@/components/Link'
 import { PageSeo } from '@/components/SEO'
-import Tag from '@/components/Tag'
+// import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 
-const MAX_DISPLAY = 5
+// const MAX_DISPLAY = 5
 const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
 
 export async function getStaticProps() {
@@ -28,7 +28,7 @@ export default function Home({ posts }) {
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
+          {posts.map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
               <li key={slug} className="py-12">
@@ -53,11 +53,11 @@ export default function Home({ posts }) {
                               {title}
                             </Link>
                           </h2>
-                          {/* <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div> */}
+                          {/*<div className="flex flex-wrap">*/}
+                          {/*  {tags.map((tag) => (*/}
+                          {/*    <Tag key={tag} text={tag} />*/}
+                          {/*  ))}*/}
+                          {/*</div>*/}
                         </div>
                         <div className="prose text-gray-500 max-w-none dark:text-gray-400">
                           {summary}
@@ -80,17 +80,17 @@ export default function Home({ posts }) {
           })}
         </ul>
       </div>
-      {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base font-medium leading-6">
-          <Link
-            href="/blog"
-            className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
-            aria-label="all posts"
-          >
-            All Posts &rarr;
-          </Link>
-        </div>
-      )}
+      {/*{posts.length > MAX_DISPLAY && (*/}
+      {/*  <div className="flex justify-end text-base font-medium leading-6">*/}
+      {/*    <Link*/}
+      {/*      href="/blog"*/}
+      {/*      className="text-red-500 hover:text-red-600 dark:hover:text-red-400"*/}
+      {/*      aria-label="all posts"*/}
+      {/*    >*/}
+      {/*      All Posts &rarr;*/}
+      {/*    </Link>*/}
+      {/*  </div>*/}
+      {/*)}*/}
     </>
   )
 }
