@@ -3,7 +3,7 @@ import { useTheme } from 'next-themes'
 
 function Logo() {
   const [mounted, setMounted] = useState(false)
-  const { theme } = useTheme()
+  const { theme, resolvedTheme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
@@ -11,7 +11,7 @@ function Logo() {
 
   if (!mounted) return null
 
-  return theme === 'dark' ? <LightLogo /> : <DarkLogo />
+  return theme === 'dark' || resolvedTheme === 'dark' ? <LightLogo /> : <DarkLogo />
 }
 
 const DarkLogo = () => {
