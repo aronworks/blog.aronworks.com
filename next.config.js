@@ -5,7 +5,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   images: {
-    disableStaticImages: true
+    disableStaticImages: true,
   },
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   eslint: {
