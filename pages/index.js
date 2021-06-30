@@ -52,7 +52,7 @@ export default function Home({ posts }) {
                             </Link>
                           </h2>
                         </div>
-                        <div className="prose-lg text-gray-500 max-w-none dark:text-gray-400">
+                        <div className="prose lg:prose-lg text-gray-500 max-w-none dark:text-gray-400">
                           {summary}
                         </div>
                       </div>
