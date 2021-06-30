@@ -31,7 +31,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
             </div>
           </header>
           <div className="pb-8 max-w-3xl mx-auto">
-            <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{children}</div>
+            <div className="pt-10 pb-8 prose-lg dark:prose-dark max-w-none">{children}</div>
           </div>
         </div>
       </article>
